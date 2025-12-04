@@ -1,0 +1,7 @@
+{
+  "name": "Geheugensteuntje",
+  "description": "Neem gesprekken op, transcribeer ze automatisch en maak actiepunten en agenda-afspraken.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
