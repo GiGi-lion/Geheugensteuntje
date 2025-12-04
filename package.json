@@ -2,6 +2,7 @@
   "name": "geheugensteuntje",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://gigi-lion.github.io/Geheugensteuntje",
   "type": "module",
   "scripts": {
     "dev": "vite",
