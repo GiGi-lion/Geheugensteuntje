@@ -1,7 +1,9 @@
+
 import { GoogleGenAI, Type } from "@google/genai";
 import { ProcessingResult } from "../types";
 import { blobToBase64 } from "./utils";
 
+// Initializing the Google GenAI client
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const processMeetingAudio = async (audioBlob: Blob): Promise<ProcessingResult> => {
@@ -58,8 +60,9 @@ export const processMeetingAudio = async (audioBlob: Blob): Promise<ProcessingRe
       required: ["transcript", "summary", "actionItems", "calendarEvents"],
     };
 
+    // Use the recommended Gemini model for text and multi-modal tasks
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-3-flash-preview",
       contents: {
         parts: [
           {
